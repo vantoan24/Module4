@@ -1,0 +1,10 @@
+let free = true;
+free = false;
+let score = 10;
+free = false;
+let elm = "ABC";
+elm = "ABC 123";
+elm = `Free:${free} - Score:${score} - Elm:${elm}`;
+console.log("free");
+console.log("score");
+console.log("elm");
