@@ -1,0 +1,10 @@
+<h2>Font size editor</h2>
+
+<div>
+  <label>Enter font size (px):</label>
+  <input #element type="range" min="0" max="500" value="0" (change)="changeFontSizeValue(element.value)">
+</div>
+
+<p class="output" [style.fontSize.px]="fontSize">
+  Ngày.
+</p>
