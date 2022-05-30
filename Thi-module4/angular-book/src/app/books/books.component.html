@@ -1,0 +1,59 @@
+<div class="container">
+  <div class="card-header">
+    <h1 class="text-center">Danh sách cuốn sách</h1>
+  </div>
+
+    <div class="row">
+      <div class="col-md-4 mt-3 ">
+        <p style="display: inline">Có {{ count }} cuốn sách</p>
+      </div>
+      <div class="col-md-8 ">
+        <button
+          type="button" style="margin-left: 710px;"
+          [routerLink]="['/book-add']"
+          class="btn btn-secondary mt-3"
+        >
+          Thêm sách mới
+        </button>
+      </div>
+    </div>
+  <div class="card-body">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Tên sách</th>
+          <th>Tác giả</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let book of books; let i = index">
+          <td>{{ book.id }}</td>
+          <td>{{ book.name }}</td>
+          <td>{{ book.author }}</td>
+          <td class="text-center">
+            <button
+              class="btn btn-dark"
+              [routerLink]="['/book-show', book.id]"
+            >
+              Xem
+            </button>
+            <button
+              class="btn btn-warning mx-2"
+              [routerLink]="['/book-edit', book.id]"
+            >
+              Sửa
+            </button>
+            <button
+              class="btn btn-danger"
+              [routerLink]="['/book-delete', book.id]"
+            >
+              Xóa
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
