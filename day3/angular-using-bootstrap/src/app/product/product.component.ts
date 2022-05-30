@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductComponent implements OnInit {
   private _result =0;
+  private _number1:any
+  private _number2:any
 
   get result(): number {
     return this._result;
@@ -16,7 +18,6 @@ export class ProductComponent implements OnInit {
     this._result = value;
   }
 
-  private _number1:any
 
   get number1(): any {
     return this._number1;
@@ -26,7 +27,6 @@ export class ProductComponent implements OnInit {
     this._number1 = Number(value.target.value);
   }
 
-  private _number2:any
 
   get number2(): any {
     return this._number2;
