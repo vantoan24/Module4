@@ -1,0 +1,17 @@
+<h1>Welcome</h1>
+<h2>{{name}}</h2>
+<h3>{{age}}</h3>
+
+<input type="button" value="Tăng Tuổi" (click)="tangtuoi()">
+<input type="button" value="Trừ Tuổi" (click)="trutuoi()">
+<br>
+<span *ngIf="age <18" >còn non </span>
+<br>
+<span *ngIf="age >= 18"> Xanh chín
+  <div *ngFor="let array of arrays">
+    <li>{{array}}</li>
+  </div>
+</span>
+<br>
+Danh sách bảng chữ cái:<br>
+

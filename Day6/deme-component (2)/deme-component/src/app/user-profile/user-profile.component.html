@@ -1,0 +1,44 @@
+<p>user-profile works!</p>
+<form (ngSubmit)="xuLyHoSo(formNopCV)" #formNopCV="ngForm">
+  <table>
+    <tr>
+      <th>Ten</th>
+      <td>
+        <input id="_name" #name="ngModel"
+          [(ngModel)]="profile.name"
+          name="name"
+          [minlength]="6"
+          type="text" value="Nguyen Binh Son">
+        <p style="color: red; font-size: small" *ngIf="!name.valid">Ten ngan qua</p>
+      </td>
+    </tr>
+    <tr>
+      <th>Ngay sinh</th>
+      <td>
+        <input
+          [(ngModel)]="profile.birthdate"
+          name="birthdate"
+          type="date" value="1988-05-18">
+      </td>
+    </tr>
+    <tr>
+      <th>Contact</th>
+      <td>
+        <input
+          [(ngModel)]="profile.contact"
+          name="contact"
+          type="text" value="+84111111">
+      </td>
+    </tr>
+    <tr>
+      <th>Email</th>
+      <td>
+        <input
+          [(ngModel)]="profile.email"
+          name="email"
+          type="text" value="son@codegym.vn">
+      </td>
+    </tr>
+  </table>
+  <button type="submit">Nop ho so</button>
+</form>
